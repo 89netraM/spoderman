@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Amazing Spoderman</title>
+        
+        <meta property="title" content="Spoderman: The Game">
+        <meta property="image" content="Spoderman.png">
+        <meta property="description" content="Finally a game about our hero The Amazing Spoderman!!1!one">
+        <meta property="og:title" content="Spoderman: The Game">
+        <meta property="og:image" content="Spoderman.png">
+        <meta property="og:description" content="Finally a game about our hero The Amazing Spoderman!!1!one">
+        
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="150">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle collapsed" aria-expanded="false" aria-controls="navbar" type="button" data-toggle="collapse" data-target="#navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="http://spoderman.net">Spoderman.net</a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li id="navHome" class="active"><a href="#pageHome">Home</a></li>
+                        <li id="navGame"><a href="#pageGame">Game</a></li>
+                        <li id="navDownload"><a href="#pageDownload">Download</a></li>
+                        <li id="navAbout"><a href="#pageAbout">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div id="pageHome" class="parallax spoder">
+            <div class="container">
+                <div class="jumbotron">
+                    <h1>The Amazing Spoderman</h1>
+                    <p>We are two students that have made a game about the meme <a href="http://knowyourmeme.com/memes/spoderman-spodermen" target="_blank">Spoderman</a>. This is our graduation work. We hope you have fun in the game! (If you hate on the game, we will find you and we will end your miserable little existens. Have a great day.)</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="pageGame" class="parallax dolan">
+            <div class="container">
+                <div class="jumbotron">
+                    <h1>The Amazing Spoderman</h1>
+                    <p>The game is perfect now. Much game. Such perfect.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="pageDownload" class="parallax pepe">
+            <div class="container">
+                <div class="jumbotron">
+                    <h1>Download</h1>
+                    <small>Updated 2017-03-11 20:00</small>
+                    <p>Download and execute the Installer to install the game. Then ENJOY the game!</p>
+                    <a href="" target="_blank" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="pageAbout" class="parallax skolan">
+            <div class="container">
+                <div class="jumbotron">
+                    <h1>About</h1>
+                    <p>We are two students and this is our gymnasiearbete</p>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <a href="mailto:marten@spoderman.net" class="card">
+                                <img src="https://images.vexels.com/media/users/2116/69555/preview2/3aa0b1feb34381494958b97787ef9d02-business-man-avatar-vector.png" alt="The Programmer Avatar" style="width:100%">
+                                <div>
+                                    <h4><b>The Programmer</b></h4> 
+                                    <p>Mårten Åsberg</p> 
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <img src="https://images.vexels.com/media/users/2116/69555/preview2/3aa0b1feb34381494958b97787ef9d02-business-man-avatar-vector.png" alt="The Programmer Avatar" style="width:100%">
+                                <div>
+                                    <h4><b>The Designer</b></h4> 
+                                    <p>Jacob Lood Stark</p> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <small class="bottomRight"></small>
+        </div>
+        
+        <footer class="footer">
+            <div class="container">
+                <h3>Disclaimer</h3>
+                <p>This is a work of satire and should be wieved as a parody. We are not affiliated with Marvel nor Disney. We do not own the characters Spiderman or Donald Duck. None of the characters are owned or created by us. Are you the creator of one of the following characters: Spoderman, Dolan or Pepe, then please contact us, or if you have some other question.</p>
+            </div>
+        </footer>
+        
+        <script>
+            $(document).ready(function() {
+                $('a[href^="#"]').click(function(event) {
+                    var target = $(this.getAttribute("href"));
+
+                    if(target.length) {
+                        event.preventDefault();
+                        
+                        $("html, body").stop().animate({
+                        scrollTop: target.offset().top
+                        }, 750);
+                    }
+                    
+                    $(".navbar-collapse.in").collapse("hide");
+                });
+            });
+        </script>
+        
+        <style>
+            body, html {
+                height: 100%;
+            }
+            
+            .parallax {
+                position: relative;
+                
+                min-height: 100%;
+                padding-top: 100px;
+                
+                background-attachment: fixed;
+                background-position: top;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .parallax.spoder {
+                background-image: url(Spoderman.png);
+            }
+            .parallax.pepe {
+                background-image: url(Pepe.png);
+            }
+            .parallax.dolan {
+                background-image: url(Dolan.png);
+            }
+            .parallax.skolan {
+                background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5d/%C3%84lvkullegymnasiet_Karlstad.JPG);
+            }
+            
+            .col-sm-6 {
+                text-align: center;
+            }
+            .card {
+                width: 300px;
+                text-align: left;
+                display: inline-block;
+                
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+            }
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+            .card div {
+                padding: 2px 16px;
+            }
+            
+            .bottomRight {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+            }
+            
+            .footer {
+                background-color: #000000;
+            }
+        </style>
+    </body>
+</html>
